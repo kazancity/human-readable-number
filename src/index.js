@@ -1,4 +1,4 @@
-toReadable=(nmbr)=>{let
+module.exports=toReadable=(nmbr)=>{let
     oneDig=['zero','one','two','three','four','five','six','seven','eight','nine','ten'],
     twoDig=['twenty','eleven','twelve','thirteen','fourteen','fifteen','sixteen','seventeen','eighteen','nineteen'],
     thrDig=['hundred','ten','twenty','thirty','forty','fifty','sixty','seventy','eighty','ninety']
@@ -14,4 +14,3 @@ toReadable=(nmbr)=>{let
             if(nmbr.toString()[1]==1)return oneDig[nmbr.toString()[0]]+' '+thrDig[0]+' '+twoDig[nmbr.toString()[2]]
             if(nmbr.toString()[2]==0)return oneDig[nmbr.toString()[0]]+' '+thrDig[0]+' '+thrDig[nmbr.toString()[1]]
             else return oneDig[nmbr.toString()[0]]+' '+thrDig[0]+' '+thrDig[nmbr.toString()[1]]+' '+oneDig[nmbr.toString()[2]]}}
-module.exports = toReadable
